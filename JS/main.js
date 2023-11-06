@@ -20,17 +20,17 @@ let finalPrice;
 
 if (ageElement < 18){
     console.log(
-        'Caso 1: ',  finalPrice = (fullPrice * 0.8).toFixed(2)
+        'Caso 1: ', (fullPrice * 0.8).toFixed(2)
     );
     
 }else if(ageElement >= 65){
     console.log (
-        'Caso 2: ',  finalPrice = (fullPrice * 0.6).toFixed(2)
+        'Caso 2: ', (fullPrice * 0.6).toFixed(2)
     );
    
 }else {
     console.log(
-        'Caso 3: ', finalPrice = fullPrice.toFixed(2)
+        'Caso 3: ', fullPrice.toFixed(2)
     );
     
 }
