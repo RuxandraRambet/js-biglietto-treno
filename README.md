@@ -6,5 +6,5 @@ Calcolo del prezzo del biglietto del treno.
 3) Calcolare il prezzo totale del biglietto.
 4) Istruzione condizionale:
     - SE età inferiore a 18 anni avrà il 20% di sconto
-    - ALTRIMENTI SE età superiore a 65 anni avrà il 40% di sconto
+    - ALTRIMENTI SE età uguale o superiore a 65 anni avrà il 40% di sconto
     - ALTRIMENTI pagherà il prezzo pieno
