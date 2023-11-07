@@ -1,14 +1,16 @@
 'use strict';
 
 // 1) Chidere all'utente il numero di km da percorrere utilizzando un prompt.
+// 1a) Trasformo l'informazione inserita in un numero.
 
-const kmElement = parseInt(prompt("Inserisci i chilometri da percorrere"));
-console.log(kmElement);
+const kmElement = Number(prompt("Inserisci i chilometri da percorrere"));
+console.log('Km da percorrere: ', kmElement);
 
-// 2) Chidere all'utente l'età del passeggero utilizzando un prompt.
+// 2) Chidere all'utente l'età utilizzando un prompt.
+// 2a) Trasformo l'informazione inserita in un numero.
 
-const ageElement = parseInt(prompt("Inserisci l'età del passegero"));
-console.log(ageElement);
+const ageElement = Number(prompt("Inserisci l'età del passeggero"));
+console.log('Età passeggero: ', ageElement);
 
 // 3) Calcolare il prezzo totale del biglietto.
 const fullPrice = kmElement * 0.21;
@@ -16,7 +18,7 @@ console.log(fullPrice);
 
 // 4) Calcolo prezzo finale in base all'età con i rispettivi sconti
 // Uso del .toFixed Method per specificare le 2 decimali
-let finalPrice;
+
 
 if (ageElement < 18){
     console.log(
