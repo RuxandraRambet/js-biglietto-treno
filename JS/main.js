@@ -12,27 +12,30 @@ console.log('Km da percorrere: ', kmElement);
 const ageElement = Number(prompt("Inserisci l'età del passeggero"));
 console.log('Età passeggero: ', ageElement);
 
-// 3) Calcolare il prezzo totale del biglietto.
-const fullPrice = kmElement * 0.21;
-console.log(fullPrice);
+// Prezzo al km
+const kmPrice = 0.21;
 
-// 4) Calcolo prezzo finale in base all'età con i rispettivi sconti
-// Uso del .toFixed Method per specificare le 2 decimali
+// Sconto minorenni
+const discountUnder18 = 20;
+const discountOver65 = 40;
 
+if (!isNaN(kmElement) && !isNaN(ageElement)) {
+    // calcolo prezzo totale
+    let fullPrice = kmElement * kmPrice;
+    //sconto iniziale
+    let ticketDiscount = 0;
 
-if (ageElement < 18){
-    console.log(
-        'Caso 1: ', (fullPrice * 0.8).toFixed(2)
-    );
-    
-}else if(ageElement >= 65){
-    console.log (
-        'Caso 2: ', (fullPrice * 0.6).toFixed(2)
-    );
-   
+    if(ageElement < 18) {
+        ticketDiscount = (fullPrice / 100) * discountUnder18;
+    }else if (ageElement >= 65) {
+        ticketDiscount = (fullPrice / 100) * discountOver65;
+    }
+
+    //Calcolo prezzo biglietto comprensivo di sconto
+    fullPrice -= ticketDiscount;
+    console.log ('Il prezzo del biglietto è: ', fullPrice.toFixed(2));
 }else {
-    console.log(
-        'Caso 3: ', fullPrice.toFixed(2)
-    );
-    
+    // Dati non validi
+    console.log ('Errore, hai inserito valori non numerici');
 }
+
